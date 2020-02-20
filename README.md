@@ -14,11 +14,11 @@
 
 - pydrive
 
-''pip install pydrive''
+`pip install pydrive`
 
 -  picamera
 
-''pip install picamera''
+`pip install picamera`
 
 
 ## Hardware:
