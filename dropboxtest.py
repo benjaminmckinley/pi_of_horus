@@ -29,9 +29,9 @@ def main():
 	camera.start_preview()
 	sleep(2) # Camera warm-up time
 
-	for x in range(3) : # limit calls for now
+	for x in range(2) : # limit calls for now
 		photo_name = formatTimestamp() + ".jpeg"
-		photo_path = "/photos/" + photo_name
+		photo_path = "photos/" + photo_name
 		camera.capture(photo_path) # take photo
 		upload(dbx, photo_path, "/" + photo_name) # upload file
 		sleep(25)
