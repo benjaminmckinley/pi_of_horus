@@ -11,18 +11,15 @@
 
  **Image from [Arducam Camera Guide](https://www.arducam.com/choose-camera-modules-raspberry-pi-jetson-nano-guide/)**
 
-- For the scale of the project, storing a small cache of short video files through Google Drive made the most sense for ease of setup and accessibility.
+- For the scale of the project, storing a small cache of short video files through Dropbox made the most sense for ease of setup and accessibility.
 
 ## Required Installations:
 
-- pydrive
-
-`pip install pydrive`
-
 -  picamera
-
 `pip install picamera`
 
+- dropbox
+`pip install dropbox`
 
 ## Hardware:
 
