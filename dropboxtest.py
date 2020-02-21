@@ -1,3 +1,4 @@
+from picamera import PiCamera
 import dropbox
 from time import sleep
 import datetime
@@ -16,20 +17,23 @@ def upload(dbx, filepath, upload_path):
         data = file.read()
     dbx.files_upload(data, upload_path)
 
+# Format current time into string going to seconds place
 def formatTimestamp():
     timestamp = datetime.datetime.now()
     return timestamp.strftime("%Y-%m-%d %H:%M:%S")
 
-
 def main():
-    for x in range(2) : # just 5 calls over 2 minutes
+    # Start and Format Camera Settings
+    camera = PiCamera() # new camera object
+    camera.resolution = (1024, 768)
+    camera.start_preview()
+    sleep(2) # Camera warm-up time
+
+    for x in range(3) : # limit calls for now
         photo_name = formatTimestamp()
-
-
-
-        upload(dbx, "zebra.jpeg", "/" + photo_name + ".jpeg")
-        sleep(30)
-
+        camera.capture(photo_name + ".jpg") # take photo
+        upload(dbx, "zebra.jpeg", "/" + photo_name + ".jpeg") # upload file
+        sleep(25)
 
 if __name__ == '__main__':
     main()
