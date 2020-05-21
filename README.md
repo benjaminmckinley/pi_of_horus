@@ -1,6 +1,6 @@
 # pi_of_horus
 
- Application for controlling a Raspberry Pi camera and managing a collection of video files hosted on Google Drive.
+ Application for controlling a Raspberry Pi camera and managing a collection of video files hosted on DropBox.
 
 ## Details:
 
@@ -28,3 +28,6 @@
 - Power supply
 - 3D printed case
   - If you would like to use the same case shown here (or improve upon it) you can check out the model I 3D printed at my local Makerspace.
+
+## Credentials:
+- Credentials for the DropBox API must be available and stored in a "credentials.json" file in the format of the blank file included in the repository.
