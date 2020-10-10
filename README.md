@@ -1,6 +1,6 @@
 # pi_of_horus
 
- Application for controlling a Raspberry Pi camera and managing a collection of video files hosted on Google Drive.
+ Application for controlling a Raspberry Pi camera and managing a collection of video files hosted on DropBox.
 
  Designed to collect timelapse images from a small garden. The script itself just connects to wifi, takes a photo, and uploads the image to Dropbox. The magic timing is handled by Crontab. A guide to configuring that tool is [here](https://www.codementor.io/@gergelykovcs/how-to-run-and-schedule-python-scripts-on-raspberry-pi-n2clhe3kp)
 
@@ -30,3 +30,6 @@
 - USB power supply
 - 3D printed case
   - If you would like to use the same case shown here (or improve upon it) you can check out the model I 3D printed at my local Makerspace.
+
+## Credentials:
+- Credentials for the DropBox API must be available and stored in a "credentials.json" file in the format of the blank file included in the repository.
