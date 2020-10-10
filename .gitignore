@@ -7,3 +7,6 @@ credentials.json
 # Images
 *.jpeg
 *.png
+
+# Mac Specific
+.DS_Store
