@@ -52,7 +52,7 @@ def formatTimestamp():
 
 def main():
 
-    if (!TESTING) wifi_on()
+    if NOT(TESTING) wifi_on()
 
     # Start and Format Camera Settings
 	camera = PiCamera() # new camera object
@@ -68,7 +68,7 @@ def main():
     # Try and upload all files in "photos" folder, remove as uploaded successfully
     upload_pic_cache()
 
-    if (!TESTING) wifi_off()
+    if NOT(TESTING) wifi_off()
 
 
 if __name__ == '__main__':
