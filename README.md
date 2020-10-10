@@ -2,6 +2,8 @@
 
  Application for controlling a Raspberry Pi camera and managing a collection of video files hosted on Google Drive.
 
+ Designed to collect timelapse images from a small garden. The script itself just connects to wifi, takes a photo, and uploads the image to Dropbox. The magic timing is handled by Crontab. A guide to configuring that tool is [here](https://www.codementor.io/@gergelykovcs/how-to-run-and-schedule-python-scripts-on-raspberry-pi-n2clhe3kp)
+
 ## Details:
 
 - This project was built to be run on a Raspberry Pi Zero W. While I do not know how well the project would run on another version of the Pi, as long as you have a WiFi dongle or WiFi enabled device it should work fine, especially on more powerful machines like the 3 or 4.
@@ -25,6 +27,6 @@
 
 - Raspberry Pi Zero W
 - USB to micro usb cable
-- Power supply
+- USB power supply
 - 3D printed case
   - If you would like to use the same case shown here (or improve upon it) you can check out the model I 3D printed at my local Makerspace.
