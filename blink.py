@@ -7,9 +7,6 @@ import datetime
 import json
 import os
 
-# TODO: add a log file for offline recording of session activity
-# TODO: check if there are any unuploaded photos every time and try to send them all
-
 DROPBOX_UPLOAD_PATH = "/"
 PHOTO_DIR = "photos/"
 TESTING = True
@@ -43,8 +40,7 @@ def upload_pic_cache():
         if file.endswith(".jpeg"):
             try: # using try-except because do not want to delete file if we cannot upload
                 photo_path = PHOTO_DIR + file
-                photo_name = file[:-5] # photo name = the file name minus .jpeg
-                upload(dbx, photo_path, DROPBOX_UPLOAD_PATH + photo_name) # upload file
+                upload(dbx, photo_path, DROPBOX_UPLOAD_PATH + file) # upload file
                 os.remove(photo_path) # remove file after upload
             except:
                 print("Error uploading to Dropbox -- cancelling processing")
@@ -56,7 +52,7 @@ def formatTimestamp():
 
 def main():
 
-    wifi_on()
+    if (!TESTING) wifi_on()
 
     # Start and Format Camera Settings
 	camera = PiCamera() # new camera object
