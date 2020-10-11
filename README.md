@@ -44,6 +44,8 @@
 
 - For the scale of the project, storing a small cache of short video files through Dropbox made the most sense for ease of setup and accessibility.
 
+- Failed uploads due to connection errors should be addressed by storing files locally until the next upload is attempted.
+
 ## Required Installations:
 
 -  picamera
