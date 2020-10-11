@@ -7,6 +7,7 @@ credentials.json
 # Images
 *.jpeg
 *.png
+!zebra.jpeg
 
 # Mac Specific
 .DS_Store
